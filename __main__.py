@@ -4,7 +4,7 @@ import ssl
 import sys
 from itertools import count
 from urllib.request import Request, urlopen
-import pandas as pd
+# import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
@@ -36,8 +36,8 @@ def crawling_pelicana():
             results.append( (name,address)+tuple(sidogu) )
 
     # store
-    table= pd.DataFrame(results,columns=['name','address','sido','gungu'])
-    table.to_csv('__result__/pelicana.csv', encoding='UTF-8', mode='w', index=True)
+    # table= pd.DataFrame(results,columns=['name','address','sido','gungu'])
+    # table.to_csv('__result__/pelicana.csv', encoding='UTF-8', mode='w', index=True)
 
 
 
@@ -117,13 +117,13 @@ def crawling_nene():
             results.append(info+tuple(sidogu))
 
     # store
-    table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gungu'])
-    BASE_DIR=os.path.dirname(os.path.abspath(__file__))
-    RESULT_DIR=f'{BASE_DIR}/__results__'
-    print(BASE_DIR)
-    table.to_csv('/root/crawling-results/nene.csv', encoding='UTF-8', mode='w', index=True)
-    for t in results:
-        print(t)
+    # table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gungu'])
+    # BASE_DIR=os.path.dirname(os.path.abspath(__file__))
+    # RESULT_DIR=f'{BASE_DIR}/__results__'
+    # print(BASE_DIR)
+    # table.to_csv('/root/crawling-results/nene.csv', encoding='UTF-8', mode='w', index=True)
+    # for t in results:
+    #     print(t)
 
     print('===================')
 
@@ -167,7 +167,7 @@ def crawling_goobne():
 
 
     # store
-        table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gungu'])
+    #     table = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gungu'])
         # table.to_csv('__result__/goobne.csv', encoding='UTF-8', mode='w', index=True)
 
 if __name__ == '__main__':
